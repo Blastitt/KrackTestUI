@@ -37,4 +37,4 @@ ehthumbs.db
 Thumbs.db
 
 # The KRACK Scripts #
-krackattacks-scripts-research/*
+scripts/krackattacks-scripts-research/*
