@@ -1,0 +1,15 @@
+{% for device in devices %}
+
+				<h3> {{ device[0] }} <small class=
+				
+				{% if device[1] == 'Patched' %}
+					"text-success"
+				{% elif device[1] == 'Testing' %}
+					"text-warning"
+				{% elif device[1] == 'Vulnerable' %}
+					"text-danger"
+				{% endif %}
+				
+				>{{ device[1] }}</small></h4>
+
+{% endfor %}
