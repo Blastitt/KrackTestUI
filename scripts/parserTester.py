@@ -1,3 +1,8 @@
 #!/bin/python
-print "asdf 0000000TESTMACADDR: IV reuse detected pairwise key vulnerable"
-print "asdf 0000000TESTMACADDR: Client DOESN'T seem to be vulnerable."
+
+import time
+
+with open('testOutput.txt', 'r') as f:
+	for line in f:
+		print line
+		time.sleep(.300)

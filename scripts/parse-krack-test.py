@@ -1,5 +1,6 @@
 from subprocess import Popen, PIPE, STDOUT
 import MySQLdb
+import sys
 
 db = MySQLdb.connect(host='localhost',
 	user='kracktester',
@@ -7,6 +8,17 @@ db = MySQLdb.connect(host='localhost',
 	db='KrackTestDb')
 
 cur = db.cursor()
+
+command = './krackattacks-scripts-research/krackattack/krack-test-client.py'
+if len(sys.argv) > 1:
+	if sys.argv[1] == "--test":
+		command = 'python parserTester.py'
+
+	elif sys.argv[1] == "--clear":
+		dropTableCmd = "DROP TABLE devices;"
+		cur.execute(dropTableCmd)
+		db.commit()
+		exit(0)
 
 createTableCmd = "CREATE TABLE IF NOT EXISTS devices \
 (MacAddr VARCHAR(50) NOT NULL, \
@@ -17,8 +29,6 @@ cur.execute(createTableCmd)
 db.commit()
 
 
-#command = './krackattacks-scripts-research/krackattack/krack-test-client.py'
-command = 'python parserTester.py'
 process = Popen(command, stdout=PIPE, shell=True)
 
 clients = []

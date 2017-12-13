@@ -1,0 +1,173 @@
+Configuration file: /root/Documents/kracktester-webapp/scripts/krackattacks-scripts-research/krackattack/hostapd.conf
+Using interface wlan1 with hwaddr f6:98:a1:5f:1e:ca and ssid "testnetwork1"
+wlan1: interface state UNINITIALIZED->ENABLED
+wlan1: AP-ENABLED 
+wlan1: STA b8:d7:af:b0:0f:05 IEEE 802.11: authenticated
+wlan1: STA b8:d7:af:b0:0f:05 IEEE 802.11: associated (aid 1)
+[12:04:36] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+wlan1: AP-STA-CONNECTED b8:d7:af:b0:0f:05
+wlan1: STA b8:d7:af:b0:0f:05 RADIUS: starting accounting session 9B1CDA4D17D6AE95
+[12:04:38] b8:d7:af:b0:0f:05: Hostapd: already installing pairwise key
+[12:04:38] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+wlan1: STA 50:9e:a7:65:25:e6 IEEE 802.11: authenticated
+wlan1: STA 50:9e:a7:65:25:e6 IEEE 802.11: associated (aid 2)
+[12:04:38] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+wlan1: AP-STA-CONNECTED 50:9e:a7:65:25:e6
+wlan1: STA 50:9e:a7:65:25:e6 RADIUS: starting accounting session 8E2292F87F71BBDB
+[12:04:40] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:40] 50:9e:a7:65:25:e6: Hostapd: already installing pairwise key
+[12:04:40] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:42] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:42] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:44] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:44] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:46] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:46] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:48] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:48] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:50] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:50] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:52] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:52] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:54] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:54] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:56] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:56] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:58] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:58] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:00] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:00] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:02] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:02] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:04] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:04] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:06] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:06] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:08] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:08] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:10] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:10] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:12] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:12] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:14] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:14] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:16] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:16] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:18] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:18] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:20] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:20] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:22] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:22] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:04:08] Note: disable Wi-Fi in network manager & disable hardware encryption. Both may interfere with this script.[1;0m
+[12:04:10] Starting hostapd ...[1;0m
+[12:04:11] [0;32mReady. Connect to this Access Point to start the tests. Make sure the client requests an IP using DHCP![1;0m
+[12:04:38] [0;32mb8:d7:af:b0:0f:05: DHCP reply 192.168.100.2 to b8:d7:af:b0:0f:05[1;0m
+[12:04:38] [0;32mb8:d7:af:b0:0f:05: DHCP reply 192.168.100.2 to b8:d7:af:b0:0f:05[1;0m
+[12:04:40] b8:d7:af:b0:0f:05: client has IP address -> testing for group key reinstallation in the 4-way handshake[1;0m
+[12:04:40] b8:d7:af:b0:0f:05: sending broadcast ARP to 192.168.100.2 from 192.168.100.1[1;0m
+[12:04:40] [0;32m50:9e:a7:65:25:e6: IV reuse detected (IV=1, seq=2). Client is vulnerable to pairwise key reinstallations in the 4-way handshake![1;0m
+[12:04:42] b8:d7:af:b0:0f:05: sending broadcast ARP to 192.168.100.2 from 192.168.100.1[1;0m
+[12:04:43] [0;32m50:9e:a7:65:25:e6: DHCP reply 192.168.100.3 to 50:9e:a7:65:25:e6[1;0m
+[12:04:43] [0;32m50:9e:a7:65:25:e6: DHCP reply 192.168.100.3 to 50:9e:a7:65:25:e6[1;0m
+[12:04:43] [0;32m50:9e:a7:65:25:e6: DHCP reply 192.168.100.3 to 50:9e:a7:65:25:e6[1;0m
+[12:04:44] b8:d7:af:b0:0f:05: sending broadcast ARP to 192.168.100.2 from 192.168.100.1[1;0m
+[12:04:44] 50:9e:a7:65:25:e6: client has IP address -> testing for group key reinstallation in the 4-way handshake[1;0m
+[12:04:44] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:04:46] b8:d7:af:b0:0f:05: sending broadcast ARP to 192.168.100.2 from 192.168.100.1[1;0m
+[12:04:46] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:04:48] b8:d7:af:b0:0f:05: sending broadcast ARP to 192.168.100.2 from 192.168.100.1[1;0m
+[12:04:48] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:04:50] b8:d7:af:b0:0f:05: sending broadcast ARP to 192.168.100.2 from 192.168.100.1[1;0m
+[12:04:50] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:04:52] b8:d7:af:b0:0f:05: sending broadcast ARP to 192.168.100.2 from 192.168.100.1[1;0m
+[12:04:52] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:04:54] b8:d7:af:b0:0f:05: sending broadcast ARP to 192.168.100.2 from 192.168.100.1[1;0m
+[12:04:54] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:04:54] [0;32mb8:d7:af:b0:0f:05: Received 5 unique replies to replayed broadcast ARP requests. Client is vulnerable to group[1;0m
+[12:04:54] [0;32m                   key reinstallations in the 4-way handshake (or client accepts replayed broadcast frames)![1;0m
+[12:04:56] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:04:58] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:00] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:02] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:03] [0;32mb8:d7:af:b0:0f:05: client DOESN'T seem vulnerable to pairwise key reinstallation in the 4-way handshake (using standard attack).[1;0m
+[12:05:04] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:06] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:08] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:10] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:12] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:14] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:16] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:18] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:20] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:[12:05:24] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:24] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:26] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:26] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:28] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:28] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:30] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:30] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:32] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:32] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:34] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:34] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:36] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:36] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:38] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:38] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:40] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:40] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:42] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:42] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:44] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:44] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:46] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:46] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:48] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:48] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:50] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:50] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:52] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:52] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:54] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:54] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:56] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:56] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:58] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:05:58] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:00] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:00] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:02] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:02] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:04] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:04] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:06] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:06] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:08] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:08] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:10] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:10] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:12] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:12] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:14] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:14] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:16] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:16] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:18] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:18] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:20] b8:d7:af:b0:0f:05: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+[12:06:20] 50:9e:a7:65:25:e6: Hostapd: Resetting Tx IV of group key and sending Msg3/4
+wlan1: interface state ENABLED->DISABLED
+wlan1: AP-STA-DISCONNECTED 50:9e:a7:65:25:e6
+wlan1: AP-STA-DISCONNECTED b8:d7:af:b0:0f:05
+wlan1: AP-DISABLED 
+nl80211: deinit ifname=wlan1 disabled_11b_rates=0
+22] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:24] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:26] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:28] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:30] 50:9e:a7:65:25:e6: sending broadcast ARP to 192.168.100.3 from 192.168.100.1[1;0m
+[12:05:30] [0;32m50:9e:a7:65:25:e6: Received 5 unique replies to replayed broadcast ARP requests. Client is vulnerable to group[1;0m
+[12:05:30] [0;32m                   key reinstallations in the 4-way handshake (or client accepts replayed broadcast frames)![1;0m
+[12:06:21] Closing hostapd and cleaning up ...[1;0m
