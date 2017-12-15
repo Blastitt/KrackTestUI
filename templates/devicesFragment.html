@@ -10,6 +10,16 @@
 					"text-danger"
 				{% endif %}
 				
-				>{{ device[1] }}</small></h4>
+				>{{ device[1] }}
+				{% if device[1] == 'Testing' %}
+					<i class="fa fa-refresh fa-spin fa-fw"></i>
+				{% elif device[1] == 'Patched' %}
+					<i class="fa fa-check"></i>
+				{% elif device[1] == 'Vulnerable' %}
+					<i class="fa fa-warning"></i>
+				{% endif %}
+				</small>
+
+				</h4>
 
 {% endfor %}

@@ -18,6 +18,7 @@ if len(sys.argv) > 1:
 		dropTableCmd = "DROP TABLE devices;"
 		cur.execute(dropTableCmd)
 		db.commit()
+		db.close()
 		exit(0)
 
 createTableCmd = "CREATE TABLE IF NOT EXISTS devices \
