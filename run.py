@@ -1,7 +1,14 @@
+import sys
+sys.path.append('./scripts')
 from flask import Flask, request, session, render_template, render_template_string
 import json
 import os
 from flask.ext.mysql import MySQL
+from libnmap.process import NmapProcess
+from time import sleep, ctime
+import threading
+import network_scanner
+
 
 mysql = MySQL()
 
@@ -16,26 +23,54 @@ mysql.init_app(app)
 
 conn = mysql.connect();
 
-cursor = conn.cursor();
-
+cur = conn.cursor();
 
 @app.route('/devices')
 def getDevices():
 
-	cur = mysql.connect().cursor()
+    cur.execute("SELECT * FROM devices")
 
-	cur.execute("SELECT * FROM devices")
+    devices = cur.fetchall()
 
-	devices = cur.fetchall()
+    print devices;
 
-	print devices;
+    return render_template('devicesFragment.html', devices=devices)
 
-	return render_template('devicesFragment.html', devices=devices)
+@app.route('/scanFragment')
+def getLatestScan():
+	cur.execute("SELECT * FROM scans ORDER BY StartTime DESC LIMIT 1")
+	scan = cur.fetchone()
+	print scan
+	latestScan = {
+		'start_time': float(scan[0]),
+		'status': int(scan[1]),
+		'progress': int(scan[2])
+	}
+	return render_template('scanFragment.html', scan=latestScan)
 
-@app.route('/')
-def index():
+@app.route('/start-scan', methods=['POST'])
+def startScan():
+	scanThread = threading.Thread(target=network_scanner.scan_and_report, args=("127.0.0.1", "-sV"), kwargs={})
+	scanThread.start()
 
-	return render_template('index.html')
+@app.route('/services', methods=['GET'])
+def showServices():
+	return render_template('services.html')
+
+@app.route('/servicesFragment', methods=['GET'])
+def getServiceReport():
+	return render_template('servicesFragment.html')
+
+@app.route('/krack')
+def krack():
+
+    return render_template('krack.html')
+
+
+
+@app.template_filter('ctime')
+def timectime(s):
+    return ctime(s) # datetime.datetime.fromtimestamp(s)
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', debug=True)

@@ -1,15 +1,14 @@
 <html>
 <head>
-	<title>KRACK Vulnerability Tester</title>
+	<title>KRACK Vulnerability Tester - Network Auditing System</title>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A UI for the Krack Vulnerability Tester.">
     <meta name="author" content="Jonah Lazar">
 
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!-- Bootstrap Core CSS -->
-    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -31,7 +30,8 @@
 	<div class="container">
 	<div class="row">
 		<h1 class="text-center">KRACK Vulnerability Tester</h1>
-		<br>
+	</div>
+	<div class="row">
 		<h4 class="text-center">Connect to <strong>KrackTestNetwork</strong> with password <i>IWantToTest</i></h4>
 	</div>
 	<div class="row">
@@ -48,14 +48,12 @@
 
 	
 
-	<!-- jQuery -->
-    <script src="/js/jquery.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/js/bootstrap.min.js"></script>
+	<script src="/js/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
     <script>
-		(function worker() {
+		(function updateDevices() {
 		  $.ajax({
 		    url: '/devices', 
 		    success: function(data) {
@@ -63,7 +61,7 @@
 		    },
 		    complete: function() {
 		      // Schedule the next request when the current one's complete
-		      setTimeout(worker, 10000);
+		      setTimeout(updateDevices, 10000);
 		    }
 		  });
 		})();

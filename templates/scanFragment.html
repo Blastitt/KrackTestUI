@@ -1,0 +1,21 @@
+<h5><small>{{ scan['start_time'] | ctime }} | 
+
+	{% if scan['status'] == 0 or scan['progress'] >= 100 %}
+		<span class="text-success">Done <i class="fa fa-check"></i></span>
+	{% elif scan['status'] == 1 %}
+		<span class="text-success">Ready <i class="fa fa-check"></i></span>
+	{% elif scan['status'] == 2 %}
+		<span class="text-warning">Running <i class="fa fa-refresh fa-spin fa-fw"></i></span>
+	{% elif scan['status'] == 4 %}
+		<span class="text-danger">Failed <i class="fa fa-x"></i></span>
+	{% elif scan['status'] == 3 %}
+		<span class="text-danger">Cancelled <i class="fa fa-stop"></i></span>
+	{% endif %}
+
+</small></h5>
+
+
+<div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" style="width:{{ scan['progress'] }}%">
+  {{ scan['progress'] }}%
+</div>

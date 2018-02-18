@@ -1,6 +1,18 @@
 from subprocess import Popen, PIPE, STDOUT
 import MySQLdb
 import sys
+import signal
+
+class GracefulKiller:
+  kill_now = False
+  def __init__(self):
+    signal.signal(signal.SIGINT, self.exit_gracefully)
+    signal.signal(signal.SIGTERM, self.exit_gracefully)
+
+  def exit_gracefully(self,signum, frame):
+    self.kill_now = True
+
+killer = GracefulKiller()
 
 db = MySQLdb.connect(host='localhost',
 	user='kracktester',
@@ -106,4 +118,12 @@ while process.poll() is None:
 
 	if action:
 		print action
+
+	if killer.kill_now:
+		break
+
+db.close()
+process.terminate()
+
+print "Exit Successful"
 		
