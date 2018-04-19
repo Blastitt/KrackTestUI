@@ -1,0 +1,10 @@
+{% for host in hosts %}
+				
+				<span><h3> {{ host['ipaddr'] }} <small>{{ host['hostname'] }}</small></h3>
+				{% for service in services %}
+					{% if service['host'] == host['ipaddr'] %}
+						<p><b>{{ service['name'] }}</b> | {{ service['banner'] }}</p>
+					{% endif %}
+				{% endfor %}
+<hr>
+{% endfor %}

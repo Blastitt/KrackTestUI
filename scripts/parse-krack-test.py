@@ -123,7 +123,6 @@ while process.poll() is None:
 		break
 
 db.close()
-process.terminate()
 
 print "Exit Successful"
 		

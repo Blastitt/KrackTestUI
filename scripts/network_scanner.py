@@ -2,7 +2,8 @@ from libnmap.parser import NmapParser, NmapParserException
 from libnmap.process import NmapProcess
 import MySQLdb
 from time import sleep
-import sys
+from netaddr import IPNetwork
+import struct, fcntl, sys, socket
 
 db = MySQLdb.connect(host='localhost',
     user='kracktester',
@@ -50,7 +51,16 @@ createServicesTableCmd = "CREATE TABLE IF NOT EXISTS services \
 cur.execute(createServicesTableCmd)
 db.commit()
 
+def getCIDR(ipAddr, netmask):
+    return str(IPNetwork(ipAddr + '/' + netmask).cidr)
 
+def getNetMask(interface):
+    return socket.inet_ntoa(fcntl.ioctl(socket.socket(socket.AF_INET, socket.SOCK_DGRAM), 
+                             35099, struct.pack('256s', interface))[20:24])
+
+def getIpAddr(interface):
+    return socket.inet_ntoa(fcntl.ioctl(socket.socket(socket.AF_INET, socket.SOCK_DGRAM), 
+                             0x8915, struct.pack('256s', interface[:15]))[20:24])
 
 def do_scan(targets, options):
     parsed = None
@@ -84,9 +94,9 @@ def do_scan(targets, options):
     return parsed
 
 def parse_scan(nmap_report):
-    print("Starting Nmap {0} ( http://nmap.org ) at {1}".format(
-        nmap_report.version,
-        nmap_report.started))
+    #print("Starting Nmap {0} ( http://nmap.org ) at {1}".format(
+    #    nmap_report.version,
+    #    nmap_report.started))
 
     for host in nmap_report.hosts:
         if len(host.hostnames):
@@ -94,11 +104,11 @@ def parse_scan(nmap_report):
         else:
             tmp_host = ''
 
-        print("Nmap scan report for {0} ({1})".format(
-            tmp_host,
-            host.address))
-        print("Host is {0}.".format(host.status))
-        print("  PORT     STATE         SERVICE")
+    #    print("Nmap scan report for {0} ({1})".format(
+    #        tmp_host,
+    #        host.address))
+    #    print("Host is {0}.".format(host.status))
+    #    print("  PORT     STATE         SERVICE")
 
         insertHostCommand = "INSERT INTO hosts (HostName, IpAddr, ScanStartTime) \
         VALUES ('{}', '{}', '{}');".format(tmp_host, host.address, nmap_report.started)
@@ -113,12 +123,16 @@ def parse_scan(nmap_report):
                     serv.service)
             if len(serv.banner):
                 pserv += " ({0})".format(serv.banner)
-            print(pserv)
+    #        print(pserv)
             insertServiceCommand = "INSERT INTO services (Port, IpAddr, ScanStartTime, Protocol, State, Service, Banner) \
             VALUES ({}, '{}', '{}', '{}', '{}', '{}', '{}');".format(serv.port, host.address, nmap_report.started, serv.protocol, serv.state, serv.service, serv.banner)
             cur.execute(insertServiceCommand)
             db.commit()
-    print(nmap_report.summary)
+    #print(nmap_report.summary)
+
+def scanLocalNetwork(interface, arguments):
+    subnet = getCIDR(getIpAddr(interface), getNetMask(interface))
+    scan_and_report(subnet, arguments)
 
 def scan_and_report(subnet, arguments):
     report = do_scan(subnet, arguments)

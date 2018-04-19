@@ -3,3 +3,8 @@
 	border-radius: 5px;
 	padding: 10px;
 }
+
+small {
+	font-size: 18px;
+	font-weight: 40;
+}

@@ -21,45 +21,85 @@ app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 
 mysql.init_app(app)
 
-conn = mysql.connect();
-
-cur = conn.cursor();
-
 @app.route('/devices')
 def getDevices():
-
+    conn = mysql.connect()
+    cur = conn.cursor()
     cur.execute("SELECT * FROM devices")
 
     devices = cur.fetchall()
-
-    print devices;
+    conn.close()
 
     return render_template('devicesFragment.html', devices=devices)
 
 @app.route('/scanFragment')
 def getLatestScan():
-	cur.execute("SELECT * FROM scans ORDER BY StartTime DESC LIMIT 1")
-	scan = cur.fetchone()
-	print scan
-	latestScan = {
-		'start_time': float(scan[0]),
-		'status': int(scan[1]),
-		'progress': int(scan[2])
-	}
-	return render_template('scanFragment.html', scan=latestScan)
+    conn = mysql.connect()
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM scans ORDER BY StartTime DESC LIMIT 1")
+    scan = cur.fetchone()
+    latestScan = {
+    'start_time': float(scan[0]),
+    'status': int(scan[1]),
+    'progress': int(scan[2])
+    }
+    conn.close()
+    return render_template('scanFragment.html', scan=latestScan)
 
 @app.route('/start-scan', methods=['POST'])
 def startScan():
-	scanThread = threading.Thread(target=network_scanner.scan_and_report, args=("127.0.0.1", "-sV"), kwargs={})
-	scanThread.start()
+    scanThread = threading.Thread(target=network_scanner.scanLocalNetwork, args=("eth0", "-sV"), kwargs={})
+    scanThread.start()
+    return('', 204)
 
 @app.route('/services', methods=['GET'])
 def showServices():
-	return render_template('services.html')
+    return render_template('services.html')
 
 @app.route('/servicesFragment', methods=['GET'])
 def getServiceReport():
-	return render_template('servicesFragment.html')
+    scanId = request.args.get('scanId')
+    conn = mysql.connect()
+    cur = conn.cursor()
+
+    cur.execute("SELECT * FROM scans WHERE Progress=100 ORDER BY StartTime DESC LIMIT 1")
+    scan = cur.fetchone()
+
+    cur.execute("SELECT * FROM hosts WHERE ScanStartTime={0}".format(float(scan[0])))
+    hostResults = cur.fetchall()
+
+    cur.execute("SELECT * FROM services WHERE ScanStartTime={0}".format(float(scan[0])))
+    serviceResults = cur.fetchall()
+
+    conn.close()
+
+
+    serviceResults = sorted(serviceResults, key=lambda entry: entry[2])
+    hostResults = sorted(hostResults, key=lambda entry: entry[1])
+
+    services = []
+    detectedHosts = []
+    hosts = []
+
+    for entry in serviceResults:
+        service = {
+        'port': float(entry[1]),
+        'host': entry[2],
+        'name': entry[6],
+        'banner': entry[7] or "No Info",
+        }
+        services.append(service)
+        detectedHosts.append(service['host'])
+
+    for entry in hostResults:
+        host = {
+        'hostname': entry[0],
+        'ipaddr': entry[1]
+        }
+        if host['ipaddr'] in detectedHosts:
+        	hosts.append(host)
+
+    return render_template('servicesFragment.html', services=services, hosts=hosts)
 
 @app.route('/krack')
 def krack():
