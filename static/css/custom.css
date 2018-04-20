@@ -4,7 +4,19 @@
 	padding: 10px;
 }
 
+#services-section {
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+#devices-section {
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 10px;
+}
+
 small {
 	font-size: 18px;
-	font-weight: 40;
+	font-weight: 0.4;
 }
